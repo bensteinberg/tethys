@@ -7,7 +7,7 @@ for import into a subject set. To install the script, run
 python3 -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
-pip install --editable .
+pip install --editable splitpdf
 ```
 
 You should then be able to run `splitpdf --help`.
