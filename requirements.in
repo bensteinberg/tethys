@@ -1,0 +1,5 @@
+click
+pymupdf
+
+pip-tools
+flake8
