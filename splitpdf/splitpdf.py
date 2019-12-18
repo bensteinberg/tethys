@@ -9,6 +9,11 @@ from datetime import datetime
 @click.option('--pdf', required=True, help='PDF file to split into pages')
 @click.option('--out', default='.', help='Output directory')
 def split_pdf(pdf, out):
+    """
+    The reasons for using this script rather than the more obvious ImageMagick
+    are two: first, PyMuPDF is much faster (5-6x?), and second, we can generate
+    the necessary manifest at the same time.
+    """
     path, filename = os.path.split(pdf)
     base = os.path.splitext(filename)[0]
 
